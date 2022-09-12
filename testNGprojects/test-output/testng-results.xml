@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-09-08T17:44:02 IST" name="crossbrowsersuite" finished-at="2022-09-08T17:44:23 IST" duration-ms="21571">
+    <groups>
+    </groups>
+    <test started-at="2022-09-08T17:44:02 IST" name="crossbrowsertest" finished-at="2022-09-08T17:44:23 IST" duration-ms="21571">
+      <class name="paramaterisation.logintestforExtent">
+        <test-method is-config="true" signature="setup()[pri:0, instance:paramaterisation.logintestforExtent@56620197]" started-at="2022-09-08T17:44:02 IST" name="setup" finished-at="2022-09-08T17:44:07 IST" duration-ms="4335" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="logintest()[pri:1, instance:paramaterisation.logintestforExtent@56620197]" started-at="2022-09-08T17:44:07 IST" name="logintest" finished-at="2022-09-08T17:44:23 IST" duration-ms="16579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logintest -->
+        <test-method is-config="true" signature="capturescreen(org.testng.ITestResult)[pri:0, instance:paramaterisation.logintestforExtent@56620197]" started-at="2022-09-08T17:44:23 IST" name="capturescreen" finished-at="2022-09-08T17:44:23 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=logintest status=SUCCESS method=logintestforExtent.logintest()[pri:1, instance:paramaterisation.logintestforExtent@56620197] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- capturescreen -->
+      </class> <!-- paramaterisation.logintestforExtent -->
+    </test> <!-- crossbrowsertest -->
+  </suite> <!-- crossbrowsersuite -->
+</testng-results>

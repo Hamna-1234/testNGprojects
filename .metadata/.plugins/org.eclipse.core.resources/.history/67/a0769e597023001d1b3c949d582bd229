@@ -1,0 +1,45 @@
+package extendReports;
+
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+public class Loglevels {
+
+	public static void main(String[] args) throws IOException {
+		ExtentReports extentReports =new ExtentReports();
+		ExtentSparkReporter sparkreporter =new ExtentSparkReporter("C:\\Excel Files\\Extendreports");
+		extentReports.attachReporter(sparkreporter);
+		extentReports.createTest("Test1")
+		.log(Status.FAIL,"<b>failed</b>")
+		.log(Status.PASS,"<b><i>passed</b></i>")
+		.log(Status.INFO,"info")
+		.log(Status.INFO,"<i>info</i>");
+		
+		String xmldata = {<?xml version="1.0" encoding="UTF-8"?>
+		<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+		<suite name="Suite">
+		  <test thread-count="5" name="Test">
+		    <classes>
+		      <class name="package1.Tc1"/>
+		      <class name="package1.Tc2"/>
+		    </classes>
+		  </test> <!-- Test -->
+		</suite> <!-- Suite -->}
+
+		
+		
+		
+		
+		extentReports.flush();
+		Desktop.getDesktop().browse(new File("C:\\Excel Files\\Extendreports\\index.html").toURI());
+
+
+	}
+
+}

@@ -1,0 +1,43 @@
+package excelReadAndWrite;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class Excelread {
+
+	public static void main(String[] args) throws IOException {
+		FileInputStream file = new FileInputStream("C://Excel Files/data.xlsx");
+		XSSFWorkbook workbook =new XSSFWorkbook(file);
+		
+		XSSFSheet sheet =workbook.getSheet("sheet1");
+		
+		int rownum=sheet.getLastRowNum();
+		int columnnum =sheet.getRow(0).getLastCellNum();
+		
+		System.out.println(rownum);
+		System.out.println(columnnum);
+		
+		for(int r=0;r<=rownum;r++)
+		{
+			XSSFRow row =sheet.getRow(r);
+			
+			for(int c=0;c<columnnum;c++)
+			{
+				XSSFCell cell =row.getCell(c);
+				String value=cell.toString();
+				System.out.print(value+"         ");
+			}
+			System.out.println();
+		}
+		
+		
+
+	}
+
+}

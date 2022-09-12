@@ -1,0 +1,5 @@
+package log4j.demo;
+
+public class Log4J {
+
+}

@@ -1,0 +1,31 @@
+package extendReports;
+
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+public class Loglevels {
+
+	public static void main(String[] args) throws IOException {
+		ExtentReports extentReports =new ExtentReports();
+		ExtentSparkReporter sparkreporter =new ExtentSparkReporter("C:\\Excel Files\\Extendreports");
+		extentReports.attachReporter(sparkreporter);
+		extentReports.createTest("Test1")
+		.log(Status.FAIL,"failed")
+		.log(Status.PASS,"passed");
+		
+		
+		
+		
+		extentReports.flush();
+		Desktop.getDesktop().browse(new File("C:\\Excel Files\\Extendreports\\index.html").toURI());
+
+
+	}
+
+}

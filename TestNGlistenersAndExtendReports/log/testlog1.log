@@ -1,0 +1,28 @@
+2022-08-30 17:02:34,107 [main] INFO Log4jdemo - Setup method is tarted
+2022-08-30 17:02:34,139 [main] INFO Log4jdemo - Setup method is progress
+2022-08-30 17:02:34,165 [main] INFO Log4jdemo - login is started
+2022-08-30 17:02:34,167 [main] INFO Log4jdemo - login is progress
+2022-08-30 17:02:34,169 [main] INFO Log4jdemo - login is completed
+2022-08-30 17:02:34,171 [main] INFO Log4jdemo - login is passed
+2022-08-30 17:02:34,179 [main] INFO Log4jdemo - logout is completed
+2022-08-30 17:04:18,973 [main] INFO Log4jdemo - Setup method is tarted
+2022-08-30 17:04:18,979 [main] INFO Log4jdemo - Setup method is progress
+2022-08-30 17:04:18,990 [main] INFO Log4jdemo - login is started
+2022-08-30 17:04:18,991 [main] INFO Log4jdemo - login is progress
+2022-08-30 17:04:18,993 [main] INFO Log4jdemo - login is completed
+2022-08-30 17:04:18,995 [main] INFO Log4jdemo - login is passed
+2022-08-30 17:04:19,002 [main] INFO Log4jdemo - logout is completed
+2022-08-30 18:21:14,938 [main] INFO Log4jdemo - Setup method is tarted
+2022-08-30 18:21:14,945 [main] INFO Log4jdemo - Setup method is progress
+2022-08-30 18:21:14,955 [main] INFO Log4jdemo - login is started
+2022-08-30 18:21:14,956 [main] INFO Log4jdemo - login is progress
+2022-08-30 18:21:14,956 [main] INFO Log4jdemo - login is completed
+2022-08-30 18:21:14,958 [main] INFO Log4jdemo - login is passed
+2022-08-30 18:21:14,966 [main] INFO Log4jdemo - logout is completed
+2022-08-30 18:21:27,796 [main] INFO Log4jdemo - Setup method is tarted
+2022-08-30 18:21:27,802 [main] INFO Log4jdemo - Setup method is progress
+2022-08-30 18:21:27,812 [main] INFO Log4jdemo - login is started
+2022-08-30 18:21:27,812 [main] INFO Log4jdemo - login is progress
+2022-08-30 18:21:27,814 [main] INFO Log4jdemo - login is completed
+2022-08-30 18:21:27,815 [main] INFO Log4jdemo - login is passed
+2022-08-30 18:21:27,821 [main] INFO Log4jdemo - logout is completed

@@ -1,0 +1,27 @@
+package testNGtestcase;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class MyFirstTestCase {
+	
+	
+	@Test(priority=1)
+	void openurl()
+	{
+		System.out.println("urlopened");
+		Assert.assertTrue(true);
+	}
+    @Test(priority=2)
+	void login() {
+		System.out.println("we have login");
+		Assert.assertTrue(false);
+	}
+	
+    @Test(priority=3)
+	void logout()
+	{
+		System.out.println("we have logout");
+		Assert.assertTrue(false);
+	}
+}

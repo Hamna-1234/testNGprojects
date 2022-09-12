@@ -1,0 +1,33 @@
+package sikuliuploadanddownload;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Try {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","C://Drivers//chromedriver_win32//chromedriver.exe ");
+		ChromeDriver driver =new ChromeDriver();
+		//Thread.sleep(3000);
+		driver.get("http://demo.automationtesting.in/Register.html");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[1]/div[1]/input")).sendKeys("rahul");
+		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[1]/div[2]/input")).sendKeys("kr");
+		
+		WebElement rdmale =driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[5]/div/label[1]/input"));
+
+		System.out.println(rdmale.isDisplayed());
+		System.out.println(rdmale.isSelected());
+		System.out.println(rdmale.isEnabled());
+		
+		rdmale.click();
+		
+		WebElement hobbies =driver.findElement(By.xpath("//*[@id=\"checkbox\"]"));
+		hobbies.isDisplayed();
+		
+        
+	}
+
+}

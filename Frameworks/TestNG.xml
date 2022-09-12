@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Frameworks">
+
+	<test name="nopCommerce Test1" >
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.frameworks.testcases.Testcase_login" /> 
+			<class name="com.frameworks.testcases.Testcase_login2" /> 
+		</classes>
+	</test>
+	</suite>

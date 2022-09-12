@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name ="crossbrowsersuite">
+   <listeners>
+       <listener class-name="testNGtestcase.Listeners"/>
+   </listeners>
+   <test name ="crossbrowsertest">
+       <parameter name="browser" value="chrome"/>
+          <classes>
+               <class name ="paramaterisation.Crossbrowser"/>
+   
+          </classes>
+
+    </test>
+</suite>

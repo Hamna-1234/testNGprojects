@@ -1,0 +1,58 @@
+package testNGlisteners;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
+
+public class Testngtestcase  {
+	WebDriver driver=null;
+	@Test(priority=1)
+	void setup() throws InterruptedException
+	{
+		System.setProperty("webdriver.chrome.driver","C://Drivers//chromedriver_win32//chromedriver.exe ");
+		 driver =new ChromeDriver();
+		 Thread.sleep(3000);
+	}
+	
+	@Test(priority=2)
+	void loginbyfacebook() throws InterruptedException
+	{
+		driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input")).sendKeys("Admin");
+		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input")).sendKeys("admin123");
+		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")).click();
+		Thread.sleep(3000);
+	}
+	
+	/*@Test(priority=3)
+	void loginbyemail() throws InterruptedException
+	{
+		//Assert.assertEquals(driver.getCurrentUrl(),"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList");
+		//Thread.sleep(3000);
+		Assert.assertTrue(true);
+	}*/
+	@AfterMethod
+	public void CaptureScreen(ITestResult result) throws IOException
+	{
+		if (result.getStatus()==ITestResult.FAILURE)
+		{
+			TakesScreenshot ts =(TakesScreenshot)driver;
+			File source=ts.getScreenshotAs(OutputType.FILE);
+			File target=new File(System.getProperty("user.dir"+"/Screenshots/"+result.getName()+".Png"));
+			FileUtils.copyFile(source, target);
+			
+			System.out.println("Screenshot captured");
+		}
+	}
+
+}

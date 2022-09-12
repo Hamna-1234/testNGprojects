@@ -1,0 +1,16 @@
+package webelement3;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Iframes {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","C://Drivers//chromedriver_win32//chromedriver.exe ");
+		ChromeDriver driver =new ChromeDriver();
+		
+		driver.get("http://demo.automationtesting.in/Frames.html");
+		driver.manage().window().maximize();
+	}
+
+}

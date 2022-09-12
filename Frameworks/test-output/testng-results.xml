@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-09-02T17:18:52 IST" name="Frameworks" finished-at="2022-09-02T17:19:26 IST" duration-ms="33461">
+    <groups>
+    </groups>
+    <test started-at="2022-09-02T17:18:52 IST" name="nopCommerce Test1" finished-at="2022-09-02T17:19:26 IST" duration-ms="33461">
+      <class name="com.frameworks.testcases.Testcase_login2">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.frameworks.testcases.Testcase_login2@dd8ba08]" started-at="2022-09-02T17:19:08 IST" name="setup" finished-at="2022-09-02T17:19:10 IST" duration-ms="1850" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="login1()[pri:0, instance:com.frameworks.testcases.Testcase_login2@dd8ba08]" started-at="2022-09-02T17:19:10 IST" name="login1" finished-at="2022-09-02T17:19:25 IST" duration-ms="14384" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login1 -->
+        <test-method is-config="true" signature="logout1()[pri:0, instance:com.frameworks.testcases.Testcase_login2@dd8ba08]" started-at="2022-09-02T17:19:25 IST" name="logout1" finished-at="2022-09-02T17:19:26 IST" duration-ms="1319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout1 -->
+      </class> <!-- com.frameworks.testcases.Testcase_login2 -->
+      <class name="com.frameworks.testcases.Testcase_login">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.frameworks.testcases.Testcase_login@7ec7ffd3]" started-at="2022-09-02T17:18:53 IST" name="setup" finished-at="2022-09-02T17:18:56 IST" duration-ms="3973" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="login()[pri:0, instance:com.frameworks.testcases.Testcase_login@7ec7ffd3]" started-at="2022-09-02T17:18:57 IST" name="login" finished-at="2022-09-02T17:19:08 IST" duration-ms="11433" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="logout1()[pri:0, instance:com.frameworks.testcases.Testcase_login@7ec7ffd3]" started-at="2022-09-02T17:19:08 IST" name="logout1" finished-at="2022-09-02T17:19:08 IST" duration-ms="428" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout1 -->
+      </class> <!-- com.frameworks.testcases.Testcase_login -->
+    </test> <!-- nopCommerce Test1 -->
+  </suite> <!-- Frameworks -->
+</testng-results>

@@ -1,0 +1,21 @@
+package sikuliuploadanddownload;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Try {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","C://Drivers//chromedriver_win32//chromedriver.exe ");
+		ChromeDriver driver =new ChromeDriver();
+		//Thread.sleep(3000);
+		driver.get("http://demo.automationtesting.in/Register.html");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[1]/div[1]/input")).sendKeys("rahul");
+		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[1]/div[2]/input")).sendKeys("kr");
+		driver.findElement(By.xpath("//*[@id=\"imagesrc\"]")).click();
+
+	}
+
+}

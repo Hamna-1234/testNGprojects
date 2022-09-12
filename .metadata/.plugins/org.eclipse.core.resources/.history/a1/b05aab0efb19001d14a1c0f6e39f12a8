@@ -1,0 +1,21 @@
+package sikuliuploadanddownload;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FileDownload {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","C://Drivers//chromedriver_win32//chromedriver.exe ");
+		ChromeDriver driver =new ChromeDriver();
+		//Thread.sleep(3000);
+		driver.get("http://demo.automationtesting.in/FileDownload.html");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.xpath("//*[@id=\"textbox\"]")).sendKeys("succesfully dowloaded");
+		driver.findElement(By.xpath("//*[@id=\"createTxt\"]")).click();
+		
+
+	}
+
+}

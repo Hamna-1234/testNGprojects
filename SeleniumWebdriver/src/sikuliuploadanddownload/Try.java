@@ -1,0 +1,73 @@
+package sikuliuploadanddownload;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Try {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver","C://Drivers//chromedriver_win32//chromedriver.exe ");
+		ChromeDriver driver =new ChromeDriver();
+		//Thread.sleep(3000);
+		driver.get("http://demo.automationtesting.in/Register.html");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[1]/div[1]/input")).sendKeys("rahul");
+		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[1]/div[2]/input")).sendKeys("kr");
+		
+		WebElement rdmale =driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[5]/div/label[1]/input"));
+
+		System.out.println(rdmale.isDisplayed());
+		System.out.println(rdmale.isSelected());
+		System.out.println(rdmale.isEnabled());
+		
+		rdmale.click();
+		System.out.println("hobbies selection");
+		
+		WebElement hobbies =driver.findElement(By.xpath("//*[@id=\"checkbox2\"]"));
+		System.out.println(hobbies.isDisplayed());
+		System.out.println(hobbies.isEnabled());
+		System.out.println(hobbies.isSelected());
+		
+		hobbies.click();
+		System.out.println(hobbies.isSelected());
+		
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		Thread.sleep(3000);
+		WebElement languages=driver.findElement(By.xpath("//*[@id=\"msdd\"]"));
+		languages.click();
+		WebElement language1=driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[7]/div/multi-select/div[2]/ul/li[8]"));
+		WebElement language2=driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[7]/div/multi-select/div[2]/ul/li[16]"));
+		js.executeScript("arguments[0].scrollIntoView();",language1);
+		js.executeScript("arguments[0].scrollIntoView();",language2);
+		language1.click();
+		language2.click();
+		
+		WebElement skill=driver.findElement(By.xpath("//*[@id=\"Skills\"]"));
+		skill.click();
+		Select dropdown =new Select(skill);
+		List<WebElement>options =dropdown.getOptions();
+		System.out.println(options);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//dropdown.selectByVisibleText("English");
+		//dropdown.selectByVisibleText("Arabic");
+
+
+		
+        
+	}
+
+}
